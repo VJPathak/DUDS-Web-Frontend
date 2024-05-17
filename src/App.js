@@ -39,7 +39,6 @@ function App() {
       </div>
       <button className="product-view">View All Products</button>
       <Footer/>
-      <div>just a trial </div>
     </div>
   );
 }
