@@ -1,9 +1,7 @@
-import Navbar from "./components/Navbar";
 import MiddleOne from "./components/MiddleOne";
 import MiddleTwo from "./components/MiddleTwo";
 import FlashItem from "./components/FlashItem";
 import MiddleThree from "./components/MiddleThree";
-import Footer from "./components/Footer";
 import Data from "./components/Data";
 import './components/style.css';
 function App() {
@@ -20,7 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
       <MiddleOne />
       <MiddleTwo />
       <div className="shirts-list">
@@ -38,7 +35,6 @@ function App() {
         {shirts}
       </div>
       <button className="product-view">View All Products</button>
-      <Footer/>
     </div>
   );
 }
