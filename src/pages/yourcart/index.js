@@ -4,6 +4,8 @@
 
 export default function Yourcart(){
     return <div>
-        Yourcart Data
+        <h1 className="all-margin">
+        YourCart Data
+        </h1>
     </div>
 }

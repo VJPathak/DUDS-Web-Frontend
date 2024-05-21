@@ -2,7 +2,23 @@ body {
   padding: 0%;
   margin: 0%;
 }
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+.no-under{
+  text-decoration: none;
+
+}
+.top-rectangle, .nav-rectangle, .nav-left, .nav-middle, .nav-right, .middle-one-container, .middle-image, .middle-button, .middle-two, .middle-a, .middle-a-one, .middle-a-one-image, .rectangle, .rectangle-name, .middle-a-one-heading, .middle-a-two, .middle-a-two-days, .middle-a-two-hours, .middle-a-two-minutes, .middle-a-two-seconds, .time, .time-val, .colon, .not-show, .marrows, .middle-arrows, .left-arrow, .right-arrow, .item-image, .item-image-border, .item-heading, .cost-content, .part-one, .part-two, .green-rupee, .last-val, .last-item, .star-image, .shirts-list, .shirts-lists, .product-view, .bord, .total-part, .left-part, .left-part-one, .left-part-two, .left-part-three, .lph, .left-part-one > p, .left-part-two > p, .left-part-three > p, .right-part, .top-part, .two-images, .qrcode, .small-images, .appstore, .playstore, .specific-item {
+  box-sizing: inherit;
+}
 .top-rectangle {
   height: 41px;
   top: -600px;
@@ -43,8 +59,13 @@ body {
   line-height: 24px;
   text-align: center;
 }
+.all-margin{
+  margin: 200px;
+  font-size: 40px;
+}
 .nav-left-item {
   width: 14%;
+  color: #000;
   /* border: 2px solid red; */
 }
 .down-border {

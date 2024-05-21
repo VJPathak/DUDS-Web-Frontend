@@ -1,15 +1,21 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 // import "./style.css";
 export default function Navbar(){
-    
+
     return(
         <div>
             <div className="top-rectangle"></div>
             <div className="nav-rectangle">
                 <div className="nav-left">
-                    <a className="nav-left-item down-border" >Home</a>
+                    <NavLink to={"/"} className="no-under nav-left-item down-border" >
+                    Home
+                    </NavLink>
                     <a className="nav-left-item">Contact</a>
-                    <a className="nav-left-item">About</a>
+                    <NavLink to={"/about"} className="no-under nav-left-item" >
+                    About
+                    </NavLink>
+                    
                     <a className="nav-left-item">Category</a>
                 </div>
                 <div className="nav-middle">
@@ -25,8 +31,15 @@ export default function Navbar(){
                         <img src="./images/search.png" className="search-image"/>
                     </div>
                     <div className="right-part-two">
-                        <img src="./images/Vector.png" className="vector-image"/>
-                        <img src="./images/Cart1.png" className="cart-image"/>
+                    <NavLink to={"/wishlist"}>
+                    <img src="./images/Vector.png" className="vector-image"/>
+                    </NavLink>
+                    <NavLink to={"/yourcart"}>
+                    <img src="./images/Cart1.png" className="cart-image"/>
+                    </NavLink>
+                    
+                        
+                        
                         <img src="./images/user.png" className="user-image"/>
                     </div>
                 </div>
