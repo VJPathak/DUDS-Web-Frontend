@@ -7,6 +7,7 @@ export default function MiddleTwo() {
         minutes: 0,
         seconds: 0
     });
+    
 
     useEffect(() => {
         const deadline = new Date("2024-06-01T00:00:00").getTime();
@@ -74,10 +75,7 @@ export default function MiddleTwo() {
                         <h3 className="time-val">{countdown.seconds}</h3>
                     </div>
                 </div>
-                <div className="middle-arrows">
-                    <img src="./images/arrowL.png" className="left-arrow"/>
-                    <img src="./images/arrowR.png" className="right-arrow"/>
-                </div>
+                
             </div>
             <div className="middle-b">
 

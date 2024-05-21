@@ -50,7 +50,7 @@ export default function MiddleThree({ url }) {
     })
 
     return (
-        <div className="shirts-list">
+        <div className="shirts-lists">
             {dresses}
         </div>
     );

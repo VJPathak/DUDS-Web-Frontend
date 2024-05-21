@@ -1,6 +1,7 @@
 import React from "react";
 // import "./style.css";
 export default function Navbar(){
+    
     return(
         <div>
             <div className="top-rectangle"></div>
@@ -16,8 +17,11 @@ export default function Navbar(){
                 </div>
                 <div className="nav-right">
                     <div className="right-part-one">
+                        <form className="form-inputs">
+
                         <input type="search" className="search-tab" placeholder="What are you looking for"
                         />
+                        </form>
                         <img src="./images/search.png" className="search-image"/>
                     </div>
                     <div className="right-part-two">

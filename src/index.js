@@ -4,11 +4,14 @@ import App from './App';
 import MainApp from './MainApp';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import GlobalState from './components/context';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <React.StrictMode>
+    <GlobalState>
     <MainApp />
+    </GlobalState>
   </React.StrictMode>
   </BrowserRouter>
 );
