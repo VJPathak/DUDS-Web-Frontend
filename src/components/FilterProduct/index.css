@@ -1,0 +1,86 @@
+.filter-products {
+  display: flex;
+  border: 2px solid green;
+  padding: 20px;
+  /* height: 100%; */
+  overflow: hidden;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  flex: 1.5;
+  flex-direction: column;
+  gap: 30px;
+  /* background-color: #f0f0f0; */
+  border: 2px solid red;
+  padding: 20px; /* Optional: Add padding for better spacing */
+}
+
+.products {
+  flex: 3;
+  background-color: #ffffff;
+  border: 2px solid red;
+  padding: 20px; /* Optional: Add padding for better spacing */
+}
+
+.filter-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44.8px;
+  text-align: left;
+  width: 196px;
+  height: 45px;
+  top: 1499px;
+  left: 37px;
+  gap: 16px;
+  border: 2px solid red;
+  opacity: 0px;
+}
+
+.filter-buttons {
+  width: 392px;
+    height: 56px;
+    top: 1762px;
+    /* padding: 7px; */
+    align-items: center;
+    left: 37px;
+    gap: 24px;
+    /* border: 2px solid red; */
+    opacity: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear-filters {
+  width: 181px;
+  height: 40px;
+  /* padding: 16px 0px 0px 0px; */
+  /* gap: 4px; */
+  opacity: 0px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5A6D57;
+  text-align: center;
+  /* border: 0px; */
+  background: white;
+  /* border-radius: 4px 0px 0px 0px; */
+}
+.apply-filters {
+  width: 181px;
+  height: 40px;
+  /* padding: 16px 0px 0px 0px; */
+  /* gap: 4px; */
+  opacity: 0px;
+  border-radius: 4px;
+  color:#FFFFFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  background: #5A6D57;
+  text-align: center;
+}

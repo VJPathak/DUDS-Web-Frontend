@@ -1,0 +1,34 @@
+.collection-area {
+  width: 392px;
+  height: 142px;
+  top: 2713px;
+  left: 37px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  border: 2px solid red;
+  border: 1px solid #748C70;
+  opacity: 0px;
+}
+
+.collection-heading-line {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  color: #748c70;
+  margin-bottom: 5px;
+}
+
+.collection-heading {
+  margin: 0px;
+}
+
+.collection-options{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

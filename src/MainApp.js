@@ -22,7 +22,7 @@ export default function MainApp(){
                         } 
                         />
                         <Route
-                        path='/product-item/:id'
+                        path='/product-item/:vid/:id'
                         element={
                             <Product/>
                         } 

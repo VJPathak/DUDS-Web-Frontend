@@ -1,9 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ApiItems from "./ApiItems";
+import { GlobalContext } from "./context";
 export default function MiddleThree({ url }) {
     const [shirtsData, setShirtsData] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [isViewAll, setIsViewAll] = useState(false);
+    const handleViewAllClick = () => {
+        setIsViewAll(!isViewAll);
+    };
+
+    // const { isViewAll, setIsViewAll, handleViewAllClick } = useContext(GlobalContext);
 
     async function fetchData(getUrl) {
         try {
@@ -50,8 +57,14 @@ export default function MiddleThree({ url }) {
     })
 
     return (
-        <div className="shirts-lists">
+        <div>
+
+        <div className={`Shirts-List ${isViewAll ? 'view-all' : ''}`}>
             {dresses}
+        </div>
+        <button className="Product-View margin-new-left" onClick={handleViewAllClick}>
+        {isViewAll ? 'Close the Products' : 'View All Products'}
+      </button>
         </div>
     );
 }

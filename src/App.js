@@ -1,16 +1,26 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import MiddleOne from "./components/MiddleOne";
 import MiddleTwo from "./components/MiddleTwo";
 import FlashItem from "./components/FlashItem";
 import MiddleThree from "./components/MiddleThree";
 import Data from "./components/Data";
 import './components/style.css';
+import FilterProduct from "./components/FilterProduct";
+import { GlobalContext } from "./components/context";
 
 function App() {
-  const [isViewAll, setIsViewAll] = useState(false);
   const shirtsListRef = useRef(null);
   const shirtsListRefer = useRef(null);
+  const [isViewAll, setIsViewAll] = useState(false);
+  const handleViewAllClick = () => {
+    setIsViewAll(!isViewAll);
+  };
+  const [isViewAllOther, setIsViewAllOther] = useState(false);
+    const handleViewAllClickOther = () => {
+        setIsViewAllOther(!isViewAllOther);
+    };
 
+  // const { isViewAll, setIsViewAll, handleViewAllClick } = useContext(GlobalContext);
   const shirts = Data.map((item) => {
     return (
       <FlashItem
@@ -19,11 +29,6 @@ function App() {
       />
     )
   });
-
-  const handleViewAllClick = () => {
-    setIsViewAll(!isViewAll);
-  };
-
   const scrollLeft = () => {
     if (shirtsListRef.current) {
       shirtsListRef.current.scrollBy({ left: -200, behavior: 'smooth' });
@@ -55,7 +60,7 @@ function App() {
         <img src="./images/arrowL.png" className="left-arrow" onClick={scrollL} />
         <img src="./images/arrowR.png" className="right-arrow" onClick={scrollR} />
       </div>
-      
+
       <div className={`shirts-list ${isViewAll ? 'view-all' : ''}`} ref={shirtsListRefer}>
         {shirts}
       </div>
@@ -63,16 +68,21 @@ function App() {
         {isViewAll ? 'Close the Products' : 'View All Products'}
       </button>
       <hr className="bord" />
-      <MiddleThree url={"https://backendinit.onrender.com/getcategory?cat=Shirts"} />
+      <FilterProduct/>
+      {/* <MiddleThree url={"https://backendinit.onrender.com/getcategory?cat=Jeans"} /> */}
+      <hr className="bord" />
+      <div className="flex-row">
+
       <h1 className="middle-a-one-heading margin-left">Recently Viewed</h1>
-      <div className="margin-left margin-bottom">
+      <div className="margin-left margin-bottom margin-right">
         <img src="./images/arrowL.png" className="left-arrow" onClick={scrollLeft} />
         <img src="./images/arrowR.png" className="right-arrow" onClick={scrollRight} />
       </div>
-      <div className={`shirts-list ${isViewAll ? 'view-all' : ''}`} ref={shirtsListRef}>
+      </div>
+      <div className={`shirts-list ${isViewAllOther ? 'view-all' : ''}`} ref={shirtsListRef}>
         {shirts}
       </div>
-      <button className="product-view" onClick={handleViewAllClick}>
+      <button className="product-view" onClick={handleViewAllClickOther}>
         {isViewAll ? 'Close the Products' : 'View All Products'}
       </button>
     </div>

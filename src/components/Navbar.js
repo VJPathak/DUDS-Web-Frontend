@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { GlobalContext } from "./context";
+import { FiHeart } from "react-icons/fi";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineUserAdd } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 // import "./style.css";
 export default function Navbar(){
-
+    const {searchParam,setSearchParam} = useContext(GlobalContext);
+    console.log(searchParam);
     return(
         <div>
             <div className="top-rectangle"></div>
@@ -25,7 +31,12 @@ export default function Navbar(){
                     <div className="right-part-one">
                         <form className="form-inputs">
 
-                        <input type="search" className="search-tab" placeholder="What are you looking for"
+                        <input 
+                            type="search" 
+                            className="search-tab"
+                            value={searchParam}
+                            onChange={(event)=>setSearchParam(event.target.value)} 
+                            placeholder="What are you looking for"
                         />
                         </form>
                         <img src="./images/search.png" className="search-image"/>
