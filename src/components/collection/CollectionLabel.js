@@ -1,12 +1,14 @@
 import React from 'react';
 
-export default function Label({ name, inputname, selectedOption, handleSelectedOption }) {
+export default function CLabel({ name, inputname, selectedOptions, handleSelectedOption }) {
+  const isChecked = selectedOptions.includes(inputname);
+
   return (
     <label className='label-container'>
       <input
         type='checkbox'
         value={inputname}
-        checked={selectedOption === inputname}
+        checked={isChecked}
         className='input-option'
         onChange={() => handleSelectedOption(inputname)}
       />

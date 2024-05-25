@@ -23,7 +23,7 @@ export default function FilterProduct() {
                 <Fabric/>
             </div>
             <div className="products">
-                <MiddleThree url={"https://backendinit.onrender.com/getcategory?cat=Jeans"} />
+                <MiddleThree url={"https://backendinit.onrender.com/getcategory?cat=Shirts"} />
             </div>
         </div>
     )

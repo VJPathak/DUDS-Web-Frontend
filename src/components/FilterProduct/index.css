@@ -1,6 +1,6 @@
 .filter-products {
   display: flex;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   padding: 20px;
   /* height: 100%; */
   overflow: hidden;
@@ -13,14 +13,14 @@
   flex-direction: column;
   gap: 30px;
   /* background-color: #f0f0f0; */
-  border: 2px solid red;
+  /* border: 2px solid red; */
   padding: 20px; /* Optional: Add padding for better spacing */
 }
 
 .products {
   flex: 3;
   background-color: #ffffff;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   padding: 20px; /* Optional: Add padding for better spacing */
 }
 

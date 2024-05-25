@@ -709,3 +709,7 @@ height: 18px; */
 .label-container input:checked ~.cover-option{
     background-color: #5A6D57;
 }
+
+.label-container input:not(:checked) ~ .cover-option {
+  background-color: #ccc;
+}
